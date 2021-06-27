@@ -278,7 +278,6 @@ class JiraHelper
 
         $response = $this->guzzle->send($request);
         if($response->getStatusCode() == 200){
-            var_dump($response->getBody()->getContents()); exit();
             return json_decode($response->getBody()->getContents());
         }
 
